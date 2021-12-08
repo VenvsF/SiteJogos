@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.menu-links{
+  display: flex;
+  justify-content: flex-end;
+}
+.logo{
+  font-size: xx-large;
+  font-stretch: expanded;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: darkred;
+}
