@@ -6,8 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 
 //paginas
@@ -24,7 +25,7 @@ import { LoginComponent } from './home/login/login.component';
     HeaderComponent,
     FooterComponent,
     ProdutosComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +34,10 @@ import { LoginComponent } from './home/login/login.component';
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatSnackBarModule,
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
