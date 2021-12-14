@@ -1,0 +1,16 @@
+{
+  "login": [
+    {
+      "nome": "Katarina Eduarda",
+      "email": "12345@email.com",
+      "senha": "admin",
+      "id": 1
+    },
+    {
+      "nome": "Joao Paes",
+      "email": "paes@email.com",
+      "senha":"admin123",
+      "id": 2
+    }
+  ]
+}
