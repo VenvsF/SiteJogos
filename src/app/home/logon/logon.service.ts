@@ -1,26 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Login } from './login-models';
+import { HttpClient } from '@angular/common/http'
+import { Logon } from './logon-models';
 import { Observable, observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
 
-  baseUrl = 'http://localhost:333/login'
+export class LogonService {
+
+  baseUrl = 'http://localhost:333/logon'
 
   constructor(private snackBar: MatSnackBar,private http: HttpClient) {
+  }
+
+  create(login: Logon): Observable<Logon>{
+    return this.http.post<Logon>(this.baseUrl, login)
   }
   showMessage(msg: string): void  {
     this.snackBar.open(msg, 'x', {
       duration: 6000,
       verticalPosition: 'bottom'
     });
-  }
 
-  create(login: Login): Observable<Login>{
-    return this.http.post<Login>(this.baseUrl, login)
-  }
-}
+}}
